@@ -5,3 +5,5 @@ __pycache__/*
 .benchmark_result
 *.out
 *.o
+settings.json
+*.exe
