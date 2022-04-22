@@ -1,0 +1,3 @@
+I used pydoc for generating the documentation, it's in the standard library
+The command is: python -m pydoc -w src_redone
+The -w flag will cause the documentation to be written out in a HTML file, instead of displaying it on the console
