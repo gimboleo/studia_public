@@ -1,0 +1,53 @@
+
+zadanie8.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <accumulate.1925>:
+   0:	f3 0f 1e fa          	endbr64 
+   4:	49 01 3a             	add    %rdi,(%r10)                                       ;res += x
+   7:	c3                   	retq   
+
+0000000000000008 <for_range_do>:
+   8:	f3 0f 1e fa          	endbr64 
+   c:	41 54                	push   %r12                                              
+   e:	55                   	push   %rbp
+   f:	53                   	push   %rbx
+  10:	48 89 f5             	mov    %rsi,%rbp
+  13:	49 89 d4             	mov    %rdx,%r12
+  16:	48 39 ef             	cmp    %rbp,%rdi                                         
+  19:	73 0f                	jae    2a <for_range_do+0x22>                            ;cur >= a + n => jump 2a
+  1b:	48 8d 5f 08          	lea    0x8(%rdi),%rbx                                    
+  1f:	48 8b 3f             	mov    (%rdi),%rdi
+  22:	41 ff d4             	callq  *%r12                                             ;'wywołanie' trampoliny
+  25:	48 89 df             	mov    %rbx,%rdi                                         ;*cur++
+  28:	eb ec                	jmp    16 <for_range_do+0xe>
+  2a:	5b                   	pop    %rbx
+  2b:	5d                   	pop    %rbp
+  2c:	41 5c                	pop    %r12
+  2e:	c3                   	retq   
+
+000000000000002f <sum>:
+  2f:	f3 0f 1e fa          	endbr64 
+  33:	48 83 ec 38          	sub    $0x38,%rsp                                        ;konstruowanie trampoliny
+  37:	48 8d 44 24 40       	lea    0x40(%rsp),%rax
+  3c:	48 89 44 24 28       	mov    %rax,0x28(%rsp)
+  41:	48 89 e0             	mov    %rsp,%rax
+  44:	48 8d 54 24 08       	lea    0x8(%rsp),%rdx                                    ;%rdx = *trampoline
+  49:	c7 44 24 08 f3 0f 1e 	movl   $0xfa1e0ff3,0x8(%rsp)                             ;<endbr64>
+  50:	fa 
+  51:	66 c7 44 24 0c 49 bb 	movw   $0xbb49,0xc(%rsp)                                 ;<movabs %r11, ??>
+  58:	48 8d 0d a1 ff ff ff 	lea    -0x5f(%rip),%rcx        # 0 <accumulate.1925>     ;%rcx = *accumulate
+  5f:	48 89 4c 24 0e       	mov    %rcx,0xe(%rsp)                                    ;*accumulate
+  64:	66 c7 44 24 16 49 ba 	movw   $0xba49,0x16(%rsp)                                ;<movabs %r10, ??>
+  6b:	48 89 44 24 18       	mov    %rax,0x18(%rsp)                                   ;%rsp
+  70:	c7 44 24 20 49 ff e3 	movl   $0x90e3ff49,0x20(%rsp)                            ;rex.WB jmp r11 // nop
+  77:	90 
+  78:	48 c7 04 24 00 00 00 	movq   $0x0,(%rsp)                                       ;res = 0
+  7f:	00 
+  80:	48 8d 34 f7          	lea    (%rdi,%rsi,8),%rsi                                ;%rsi = a + n                           
+  84:	e8 00 00 00 00       	callq  8 <for_range_do>
+  89:	48 8b 04 24          	mov    (%rsp),%rax                                       ;zdjęcie res ze stosu                                       
+  8d:	48 83 c4 38          	add    $0x38,%rsp                                        
+  91:	c3                   	retq                                                     ;return res                                                

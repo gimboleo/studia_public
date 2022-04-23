@@ -1,0 +1,57 @@
+
+zadanie5.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <aframe>:
+   0:	f3 0f 1e fa          	endbr64 
+   4:	55                   	push   %rbp
+   5:	48 89 e5             	mov    %rsp,%rbp                                ;%rbp = %rsp
+   8:	48 83 ec 10          	sub    $0x10,%rsp                               ;%rsp -= 16
+   c:	4c 8d 0c fd 00 00 00 	lea    0x0(,%rdi,8),%r9                         ;%r9 = n * 8 (rozmiar longa)
+  14:	49 8d 41 17          	lea    0x17(%r9),%rax                           ;%rax = n * 8 + 23 (rozmiar longa + wyrównanie)
+  13:	00 
+  18:	48 89 c1             	mov    %rax,%rcx
+  1b:	48 83 e1 f0          	and    $0xfffffffffffffff0,%rcx                 ;wyzerowane dolne 4 bity
+  1f:	48 25 00 f0 ff ff    	and    $0xfffffffffffff000,%rax                 ;wyzerowane dolne 12 bitów
+  25:	49 89 e2             	mov    %rsp,%r10
+  28:	49 29 c2             	sub    %rax,%r10
+  2b:	4c 89 d0             	mov    %r10,%rax                                ;%rax = %rsp - %rax (%rax != 0 kiedy %rax z 1f jest > 4096)
+
+  2e:	48 39 c4             	cmp    %rax,%rsp
+  31:	74 12                	je     45 <aframe+0x45>                         ;%rax = %rsp => jump 45
+
+  33:	48 81 ec 00 10 00 00 	sub    $0x1000,%rsp                             ;%rsp -= 4096  (rozmiar strony, alokacja strona po stronie)
+  3a:	48 83 8c 24 f8 0f 00 	orq    $0x0,0xff8(%rsp)                         ;pusta instrukcja, która robi pagefault jak wjedzie na badlandsy
+  41:	00 00 
+  43:	eb e9                	jmp    2e <aframe+0x2e>
+
+  45:	48 89 c8             	mov    %rcx,%rax                                ;%rax = %rcx (rozpatrzenie niepełnej strony)
+  48:	25 ff 0f 00 00       	and    $0xfff,%eax                              ;ucięcie do 12 bitów (111111110000)
+  4d:	48 29 c4             	sub    %rax,%rsp                                ;%rsp -= %rax
+  50:	48 85 c0             	test   %rax,%rax
+  53:	74 06                	je     5b <aframe+0x5b>                         ;%rax = 0 => jump 5b
+
+  55:	48 83 4c 04 f8 00    	orq    $0x0,-0x8(%rsp,%rax,1)                   ;pagefault jak wjedzie na badlandsy
+
+  5b:	4c 8d 44 24 0f       	lea    0xf(%rsp),%r8                            ;%r8 = %rsp + 16
+  60:	49 83 e0 f0          	and    $0xfffffffffffffff0,%r8                  ;wyzerowane dolne 4 bity
+  64:	4c 89 c1             	mov    %r8,%rcx                                 ;teraz %r8, %rcx wskazuje na p
+  67:	48 8d 45 f8          	lea    -0x8(%rbp),%rax
+  6b:	4b 89 44 08 f8       	mov    %rax,-0x8(%r8,%r9,1)                     ;p[n - 1] = &i
+  70:	48 c7 45 f8 00 00 00 	movq   $0x0,-0x8(%rbp)                          ;i = 0
+  77:	00 
+
+  78:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+  7c:	48 39 f8             	cmp    %rdi,%rax
+  7f:	7d 0b                	jge    8c <aframe+0x8c>                         ;i >= n => jump 8c
+
+  81:	48 89 14 c1          	mov    %rdx,(%rcx,%rax,8)                       ;p[i] = q
+  85:	48 83 45 f8 01       	addq   $0x1,-0x8(%rbp)                          ;i++
+  8a:	eb ec                	jmp    78 <aframe+0x78>
+
+  8c:	49 8b 04 f0          	mov    (%r8,%rsi,8),%rax                        
+  90:	48 8b 00             	mov    (%rax),%rax                              ;return *p[idx]
+  93:	c9                   	leaveq                                          ;POWRÓT
+  94:	c3                   	retq   
