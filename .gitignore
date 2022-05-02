@@ -1,9 +1,8 @@
  
 .gdb_history
-.vscode/*
-__pycache__/*
+.vscode/
+__pycache__/
 .benchmark_result
 *.out
 *.o
-settings.json
 *.exe
