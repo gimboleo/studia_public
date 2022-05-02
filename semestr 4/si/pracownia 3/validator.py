@@ -726,7 +726,7 @@ zad2:
 '''
 #Sudoku
 """
-zad4:
+zad3:
   defaults:
     timeout: 2 # second
     input_file: zad_input.txt
@@ -772,7 +772,7 @@ zad4:
 
 # Burze
 """
-zad5:
+zad4:
   defaults:
     timeout: 8 # second
     input_file: zad_input.txt
