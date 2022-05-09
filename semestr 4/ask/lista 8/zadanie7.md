@@ -1,0 +1,4 @@
+# NIEDEKLAROWANE - BŁĄD W ZADANIU (SKĄD WZIĄĆ `«buf»`?)
+
+> **Zadanie 7.**  Na podstawie [[1](https://github.com/Sorosliu1029/CSAPP-Labs/blob/master/Computer%20Systems%20A%20Programmers%20Perspective%20(3rd).pdf), §7.7.2] podręcznika zreferuj **proces relokowania** odwołań do symboli. W jaki sposób mają zostać uzupełnione pola adresów w instrukcjach, dla których wygenerowano wpisy relokacji typu `«R_X86_64_PC32»`, `«R_X86_64_32»`? Zakładamy, że odpowiednio sekcje `«.text»`, `«.rodata»`, `«.data»` i `«.bss»` pliku `«swap.o»` zostaną umieszczone kolejno pod adresami `0x1000`, `0x2000`, `0x3000` i `0x4000`. Wyznacz wartości, które konsolidator wstawi w miejsca referencji opisane przez rekordy relokacji dla symboli w pliku `«swap.c»`: `«buf»` w wierszu 5 i `«sum»` w wierszu 14.
+>> **Wskazówka:** Pozostałe typy relokacji zostały opisane w [[3](https://raw.githubusercontent.com/wiki/hjl-tools/x86-psABI/x86-64-psABI-1.0.pdf), §4.4.1].
