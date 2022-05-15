@@ -1,5 +1,3 @@
-# https://github.com/ii-ask/clz22-gimboleo
-
 Liczba zer wiodących
 ===
 
