@@ -1,0 +1,3 @@
+> **Zadanie 9.** Zapoznaj się z obrazkiem [[1](https://github.com/Sorosliu1029/CSAPP-Labs/blob/master/Computer%20Systems%20A%20Programmers%20Perspective%20(3rd).pdf), 7.19], a następnie zaprezentuj leniwe wiązanie na podstawie programu `«lazy»`. Załaduj program do debuggera `gdb` i ustaw punkty wstrzymań (ang. *breakpoint*) na wiersz 4 i 5. Po uruchomieniu program powinien zatrzymać się we wskazanych miejscach. Zauważ, że za pierwszym wywołaniem procedury `«puts»` w `«.got»` jest zapisany inny adres niż za drugim wywołaniem. Pokaż to wykonując program krokowo. Gdzie procesor skacze przy pierwszym wywołaniu `«puts»`?
+
+Zadanie w całości wykonane w `gdb` w oparciu o wiedzę z poprzedniego zadania.

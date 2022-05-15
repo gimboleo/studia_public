@@ -1,0 +1,3 @@
+break *0x401d17
+break *0x401d1f
+break *0x401d2b

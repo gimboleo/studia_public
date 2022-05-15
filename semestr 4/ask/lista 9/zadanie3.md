@@ -1,0 +1,3 @@
+# NIEDEKLAROWANE
+
+> **Zadanie 3.** Na kodzie z zadania 1 wykonaj proces tworzenia zawartości poszczególnych sekcji, który normalnie przeprowadzany jest przez asembler. Załóżmy, że zawartość sekcji `«.rodata»` zostanie zapisana w sekcji `«.data»`. Zauważ, że tworzenie zawartości sekcji `«.bss»` jest trywialne! Wyjaśnij co się dzieje w momencie przetwarzania każdego wiersza. Zawartość utworzonej sekcji `«.data»` należy zaprezentować podobnie jak polecenie `«objdump -s»`. Należy również utworzyć ręcznie tabelę symboli oraz rekordów relokacji i podać odpowiednio w postaci w jakiej drukuje je polecenie `«nm»` i `«objdump -r»`.
