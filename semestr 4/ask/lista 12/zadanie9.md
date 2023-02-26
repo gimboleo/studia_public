@@ -1,0 +1,3 @@
+# NIEDEKLAROWANE, IDEA FAJNIE Z GRUBSZA OPISANA W NOTATCE ARTURA KRASKI NA TEMAT WSPÓŁCZYNNIKA CPI
+
+> Zadanie 9. Posługując się programem `llvm-mca` wbudowanym w *Compiler Explorer* przedstaw symulację pojedynczego wywołania funkcji `«nonsense»`. Do parametrów programu dodaj: `«-mcpu=haswell -timeline -iterations=1»`. Na diagramie [Timeline view](https://llvm.org/docs/CommandGuide/llvm-mca.html#timeline-view) wskaż punkty **wysłania** (ang. *dispatch*), **wykonania** (ang. *execute*) i **zatwierdzenia** (ang. *retire*) instrukcji. Ile czasu zajmuje wykonanie funkcji według symulatora? Wyjaśnij z czego wynikają **przestoje** (ang. *stall*) w przetwarzaniu instrukcji?

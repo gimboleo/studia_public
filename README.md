@@ -33,6 +33,6 @@ This repository is focused on practical tasks which required writing code. It's 
 ### Term IV
 - [Algorithms and Data Structures](https://zapisy.ii.uni.wroc.pl/courses/algorytmy-i-struktury-danych-l-202122-letni) - partially included in the [repo](semestr%204/aisd)
 - [Artificial Intelligence](https://zapisy.ii.uni.wroc.pl/courses/sztuczna-inteligencja-202122-letni) - partially included in the [repo](semestr%204/si)
-- [Computer Architecture for Programmers](https://zapisy.ii.uni.wroc.pl/courses/architektury-systemow-komputerowych-202122-letni) - partially included in the [repo](semestr%204/ask)
+- [Computer Architecture for Programmers](https://zapisy.ii.uni.wroc.pl/courses/architektury-systemow-komputerowych-202122-letni) - included in the [repo](semestr%204/ask)
 - [Probability and Statistics](https://zapisy.ii.uni.wroc.pl/courses/rachunek-prawdopodobienstwa-i-statystyka-202122-letni)
 - [Protection of Intelectual Property](https://zapisy.ii.uni.wroc.pl/courses/ochrona-wasnosci-intelektualnej-202122-letni)

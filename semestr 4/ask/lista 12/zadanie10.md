@@ -1,0 +1,4 @@
+# NIEDEKLAROWANE
+
+> **Zadanie 10 (bonus).** Na podstawie uproszczonego (sic!) [diagramu](https://en.wikichip.org/wiki/File:haswell_block_diagram.svg) mikroarchitektury `Haswell` postaraj się wyjaśnić jaka droga czeka instrukcję od jej pobrania z pamięci do ukończenia jej wykonywania. Powróćmy do wydruku z narzędzia `llvm-mca` z poprzedniego zadania. Przyjrzyjmy się wydrukom z sekcji *Instruction Info* i *Resource pressure by instruction*. Która z wygenerowanych przez kompilator instrukcji zostanie rozłożona przez **dekoder instrukcji** na **mikro-operacje**? Które jednostki funkcyjne będą używane do wykonania poszczególnych instrukcji z naszej funkcji? Dlaczego kompilatory lubią umieszczać wejścia do pętli pod adresami podzielnymi przez 16?
+>> **Uwaga!** Nie wszystkie instrukcje `x86-64` można wykonać wyłącznie z użyciem jednej jednostki funkcyjnej.

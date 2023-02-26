@@ -1,0 +1,3 @@
+> **Zadanie 9 (bonus).** Nagraj na przenośny dysk USB program [memtest86](https://www.memtest86.com/download.htm) i uruchom go z poziomu wbudowanego oprogramowania `UEFI`. Podaj parametry systemu pamięci w swoim komputerze. Jaka jest przepustowość poszczególnych poziomów pamięci podręcznej i pamięci DRAM? Oszacuj, w taktach procesora, średni czas dostępu do pamięci podręcznej L1, L2, L3 i pamięci DRAM.
+
+Zadanie wykonane na żywo na konsultacjach z prowadzącym po uruchomieniu `memtest86`.

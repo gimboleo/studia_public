@@ -3,7 +3,7 @@
 
 # [Instrukcja movabsq](https://stackoverflow.com/questions/40315803/difference-between-movq-and-movabsq-in-x86-64)
 
-Mamy $x = (x_{15}...x_0)_{16} \ \ \ y = (y_{15}...y_0)_{16}$, gdzie $x_i, y_i$ to kolejne półbajty reprezentujące jedną cyfrę. Chcemy obliczyć $u = (u_{15}...u_0)_{10} = (x_{15}...x_0)_{10} + y_{15}...y_0)_{10}$, gdzie $x_i, y_i$ to kolejne cyfry.
+Mamy $x = (x_{15}...x_0)_{16} \ \ \ y = (y_{15}...y_0)_{16}$, gdzie $x_i, y_i$ to kolejne półbajty reprezentujące jedną cyfrę. Chcemy obliczyć $u = (u_{15}...u_0)_{10} = (x_{15}...x_0)_{10} + (y_{15}...y_0)_{10}$, gdzie $x_i, y_i$ to kolejne cyfry.
 
 Zauważmy, że dodawanie binarne półbajtów prawie daje dobre rowiązanie:
 - Jeżeli suma dwóch cyfr nie przekracza $9$, wynik jest w porządku.

