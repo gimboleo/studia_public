@@ -14,7 +14,7 @@ This repository is focused on practical tasks which required writing code. It's 
 
 ### Term II
 - [A different perspective on Economy and Business (Lecture)](https://zapisy.ii.uni.wroc.pl/courses/o-ekonomii-i-gospodarce-inaczej-w-202021-letni)
-- [Programming Methodology](https://zapisy.ii.uni.wroc.pl/courses/metody-programowania-202021-letni)
+- [Programming Methodology](https://zapisy.ii.uni.wroc.pl/courses/metody-programowania-202021-letni) - included in the [repo](semestr%202/metody)
 - [Algebra](https://zapisy.ii.uni.wroc.pl/courses/algebra-202021-letni)
 - [Object-oriented programming](https://zapisy.ii.uni.wroc.pl/courses/programowanie-obiektowe-202021-letni)
 - [C++ Course](https://zapisy.ii.uni.wroc.pl/courses/kurs-jezyka-c-202021-letni) - included in the [repo](semestr%202/cpp)
