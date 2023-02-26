@@ -1,0 +1,28 @@
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 75%;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+input {
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.label {
+    background-color: lightgray; 
+    text-align: left;
+}
+
+.error {color: red;}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

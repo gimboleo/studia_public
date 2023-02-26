@@ -1,0 +1,1 @@
+insert into OSOBA1 (Imie, Nazwisko, Plec) values ('Jan', 'Œpiewak', 'M')

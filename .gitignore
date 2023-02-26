@@ -9,3 +9,5 @@ __pycache__/
 *.bak
 *.dll
 *.class
+*.7z
+node_modules

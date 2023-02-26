@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "pl">
+    <head>
+        <title>Wypełniona deklaracja</title>
+        <meta charset = "UTF-8">
+        <link rel = "stylesheet" href = "/print.css">
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td class = "label" colspan = "2">Przedmiot:</td>
+                <td colspan = "3"><%= course %></td>
+                <td class = "label" colspan = "4">Imię i nazwisko:</td>
+                <td colspan = "<%= locals.points.length - 7 %>"><%= name %></td>
+                <td class = "label">Grupa:</td>
+                <td><%= group %></td>
+            </tr>
+
+            <tr>
+                <td class = "label">Zadanie:</td>
+                <% for(let i = 1; i <= locals.points.length; i++) { %>
+                    <td><%= i %></td>
+                <% } %>
+                <td class = "label">Data:</td>
+                <td colspan = "2"><%= date %></td>
+            </tr>
+
+            <tr>
+                <td class = "label">Punkty:</td>
+                <% for(let i = 1; i <= locals.points.length; i++) { %>
+                    <td><%= points[i - 1] %></td>
+                <% } %>
+                <td class = "label">Suma:</td>
+                <td><%= sum %></td>
+            </tr>
+        </table>
+    </body>
+</html>

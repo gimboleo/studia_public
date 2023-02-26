@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "pl">
+    <head>
+        <title>Zadanie 3</title>
+        <meta charset = "UTF-8">
+    </head>
+
+    <body>
+        <% if (cookies) { %>
+            <% for (let cookie of cookies) { %>
+                <form action = "/delete/<%= cookie %>" method = "POST">
+                    <span><%= cookie %></span>
+                    <button>Usuń</button>
+                </form>
+            <% } %>
+        <% } %>
+
+        <script>console.log(navigator.cookieEnabled)</script>
+    </body>
+</html>

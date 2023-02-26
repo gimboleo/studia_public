@@ -25,7 +25,7 @@ This repository is focused on practical tasks which required writing code. It's 
 ### Term III
 - [Discrete Mathematics (B)](https://zapisy.ii.uni.wroc.pl/courses/matematyka-dyskretna-l-202122-zimowy)
 - [Numerical Analysis (B)](https://zapisy.ii.uni.wroc.pl/courses/analiza-numeryczna-l-202122-zimowy)
-- [Selected Areas of Practical Software Development Course](https://zapisy.ii.uni.wroc.pl/courses/wybrane-elementy-praktyki-projektowania-oprogramowania-202122-zimowy)
+- [Selected Areas of Practical Software Development Course](https://zapisy.ii.uni.wroc.pl/courses/wybrane-elementy-praktyki-projektowania-oprogramowania-202122-zimowy) - included in the [repo](semestr%203/weppo)
 - [Advanced Python Programming](https://zapisy.ii.uni.wroc.pl/courses/kurs-rozszerzony-jezyka-python-202122-zimowy) - included in the [repo](semestr%203/python)
 - [Internet technologies](https://zapisy.ii.uni.wroc.pl/courses/kurs-www-202122-zimowy)
 - [Efficient Implementation of Algorithms](https://zapisy.ii.uni.wroc.pl/courses/metody-implementacji-algorytmow-202122-zimowy) - included in the [repo](semestr%203/mia)

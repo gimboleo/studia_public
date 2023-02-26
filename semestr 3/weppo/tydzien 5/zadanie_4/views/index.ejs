@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "pl">
+    <head>
+        <title>Wypełnianie deklaracji</title>
+        <meta charset = "UTF-8">
+        <link rel = "stylesheet" href = "/index.css">
+    </head>
+
+    <body>
+        <form method = "POST">
+            <table>
+                <tr>
+                    <td class = "label" colspan = "2">Przedmiot:</td>
+                    <td colspan = "3"><input type = "text" name = "course" value="<%= course %>"></td>
+                    <td class = "label" colspan = "4">Imię i nazwisko:</td>
+                    <td colspan = "<%= locals.points.length - 7 %>"><input type = "text" name = "name" value="<%= name %>"></td>
+                    <td class = "label">Grupa:</td>
+                    <td><input type = "text" name = "group" value="<%= group %>"></td>
+                </tr>
+
+                <tr>
+                    <td class = "label">Zadanie:</td>
+                    <% for(let i = 1; i <= locals.points.length; i++) { %>
+                        <td><%= i %></td>
+                    <% } %>
+                    <td class = "label">Data:</td>
+                    <td colspan = "2"><input type = "date" name = "date" value=  "<%= date %>"></td>
+                </tr>
+
+                <tr>
+                    <td class = "label">Punkty:</td>
+                    <% for(let i = 1; i <= locals.points.length; i++) { %>
+                        <td><input type = "number" name = "points" value = "<%= points[i - 1] %>"></td>
+                    <% } %>
+                    <td class = "label">Suma:</td>
+                    <td><input type = "number" name = "sum" id = "sum" readonly = 'readonly' value = "<%= sum %>"></td>
+                </tr>
+            </table>
+
+            <br>
+            <button id = "submit">Drukuj</button>
+            <br><br>
+            <label class = "error"><%= errorMessage %></label>
+        </form>
+
+
+        <script src = "/index.js"></script>
+    </body>
+</html>

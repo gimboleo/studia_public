@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 75%;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.label {
+    background-color: lightgray; 
+    text-align: left;
+}
