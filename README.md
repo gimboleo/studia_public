@@ -6,7 +6,7 @@ This repository is focused on practical tasks which required writing code. It's 
 ## Courses taken
 
 ### Term I
-- [Introduction to Computer Science](https://zapisy.ii.uni.wroc.pl/courses/wstep-do-informatyki-202021-zimowy)
+- [Introduction to Computer Science](https://zapisy.ii.uni.wroc.pl/courses/wstep-do-informatyki-202021-zimowy) - included in the [repo](semestr%201/wdi)
 - [Introduction to Programming in Python](https://zapisy.ii.uni.wroc.pl/courses/kurs-wstep-do-programowania-w-jezyku-python-202021-zimowy)
 - [Logic for Computer Science](https://zapisy.ii.uni.wroc.pl/courses/logika-dla-informatykow-202021-zimowy)
 - [Computing for Computer Scientists](https://zapisy.ii.uni.wroc.pl/courses/kurs-podstawowy-warsztat-informatyka-202021-zimowy)

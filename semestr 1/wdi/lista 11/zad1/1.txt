@@ -1,0 +1,4 @@
+Najdłuższy: n
+Dla 2^k-1 liczb: 2^k-1
+Najkrótszy: log2(k)
+Dla 2^k-1 liczb: k
