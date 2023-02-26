@@ -1,0 +1,6 @@
+x = 'False'
+y = 'True'
+
+x or y zwróci pierwszego niepustego stringa, czyli 'False' ;)
+
+(python uznaje stringa za prawdziwego, gdy nie jest pusty)

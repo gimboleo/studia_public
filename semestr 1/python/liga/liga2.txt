@@ -1,0 +1,1 @@
+Pan roman po uruchomieniu tego kodu otrzyma napis tylko jeden raz. Python dany moduł importuje tylko jeden raz, potem uznaje go za już załadowany i nie załaduje go ponownie.

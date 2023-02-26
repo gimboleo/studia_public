@@ -1,0 +1,18 @@
+# Od Romka dla Zuzy
+def silnia(n):
+    return n * silnia(n - 1) if n > 1 else 1
+
+--------------------------------------------
+
+import math
+# Od Romka dla Zuzy
+def silnia(n):
+    return math.factorial(n)
+
+--------------------------------------------
+
+
+from functools import reduce
+# Od Romka dla Zuzy
+def silnia(n):
+    return reduce(lambda a, b: a * b, range(1, n+1))
