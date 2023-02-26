@@ -1,5 +1,5 @@
 '''
-Rozwiązanie jest prawie kompletne - wystarczy dodać sprawdzanie, czy wszystkie komórki w blokach 3x3 są unikatowe.
+Rozwiązanie jest prawie kompletne - wystarczy dodać sprawdzanie, czy wszystkie komórki w blokach 3x3 są unikatowe.
 '''
 
 import sys
