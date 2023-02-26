@@ -18,7 +18,7 @@ This repository is focused on practical tasks which required writing code. It's 
 - [Algebra](https://zapisy.ii.uni.wroc.pl/courses/algebra-202021-letni)
 - [Object-oriented programming](https://zapisy.ii.uni.wroc.pl/courses/programowanie-obiektowe-202021-letni)
 - [C++ Course](https://zapisy.ii.uni.wroc.pl/courses/kurs-jezyka-c-202021-letni)
-- [C Mini-Course](https://zapisy.ii.uni.wroc.pl/courses/minikurs-jezyka-c-202021-letni)
+- [C Mini-Course](https://zapisy.ii.uni.wroc.pl/courses/minikurs-jezyka-c-202021-letni) - included in the [repo](semestr%202/c)
 - [Cross-Cultural Psychology (Lecture)](https://zapisy.ii.uni.wroc.pl/courses/psychologia-miedzykulturowa-w-202021-letni)
 - English Exam (B2 II)
 
